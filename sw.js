@@ -4,6 +4,7 @@ const urlsToCache = [
     '/index.html',
     '/app.js', // Corrigir para o script correto
     'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css', // O link de Bootstrap
+    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css', // O link de Font-Awesome
 ];
 
 // Instalando o Service Worker e cacheando os arquivos necessários

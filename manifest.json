@@ -1,6 +1,6 @@
 {
-    "name": "Rastreamento por GPS",
-    "short_name": "Rastreador",
+    "name": "LoGPS - Rastreamento por GPS",
+    "short_name": "LoGPS",
     "start_url": "./index.html",
     "display": "standalone",
     "background_color": "#ffffff",
