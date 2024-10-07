@@ -9,7 +9,7 @@ var wakeLock = null;
 
 if (localStorage.getItem('darkMode') === 'enabled') {
     document.body.classList.add('dark-mode');
-    document.getElementById('toggleDarkMode').innerText = 'Desativar Modo Escuro';
+    document.getElementById('toggleDarkMode').innerHTML = '<i class="fas fa-sun"></i>';
 }
 
 // Alterna entre os modos escuro e claro
@@ -18,10 +18,10 @@ document.getElementById('toggleDarkMode').addEventListener('click', function () 
 
     if (isDarkModeEnabled) {
         localStorage.setItem('darkMode', 'enabled');
-        this.innerText = 'Desativar Modo Escuro';
+        this.innerHTML = '<i class="fas fa-sun"></i>';
     } else {
         localStorage.setItem('darkMode', 'disabled');
-        this.innerText = 'Ativar Modo Escuro';
+        this.innerHTML = '<i class="fas fa-moon"></i>';
     }
 });
 
