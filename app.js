@@ -7,6 +7,24 @@ var MIN_TIME_INTERVAL = 1000; // Intervalo mínimo de 1 segundo para atualizaç�
 var registeredLocations = []; // Array para armazenar locais já registrados
 var wakeLock = null;
 
+if (localStorage.getItem('darkMode') === 'enabled') {
+    document.body.classList.add('dark-mode');
+    document.getElementById('toggleDarkMode').innerText = 'Desativar Modo Escuro';
+}
+
+// Alterna entre os modos escuro e claro
+document.getElementById('toggleDarkMode').addEventListener('click', function () {
+    const isDarkModeEnabled = document.body.classList.toggle('dark-mode');
+
+    if (isDarkModeEnabled) {
+        localStorage.setItem('darkMode', 'enabled');
+        this.innerText = 'Desativar Modo Escuro';
+    } else {
+        localStorage.setItem('darkMode', 'disabled');
+        this.innerText = 'Ativar Modo Escuro';
+    }
+});
+
 document.getElementById('startTracking').addEventListener('click', function () {
     if (!isTracking) {
         isTracking = true;
